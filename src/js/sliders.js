@@ -1,13 +1,13 @@
 import Glide from "@glidejs/glide";    // slider lib
-// import {Controls, Breakpoints} from "@glidejs/glide/dist/glide.modular.esm";
+import {Controls, Breakpoints} from "@glidejs/glide/dist/glide.modular.esm";
 import {exist} from "./additional";
 
 
 document.addEventListener(
     "DOMContentLoaded", () => {
-        if (exist('.glide')) {
+        if (exist('.glide.flag')) {
             setTimeout(()=> {
-                let sliders = document.querySelectorAll('.glide')
+                let sliders = document.querySelectorAll('.glide.flag')
                 sliders.forEach(el => {
                     new Glide(el, {
                         type: 'carousel',
@@ -28,6 +28,24 @@ document.addEventListener(
                             }
                         }
                     }).mount()
+                })
+            }, 2000)
+        }
+
+        if (exist('.glide.comments')) {
+            setTimeout(()=> {
+                let sliders = document.querySelectorAll('.glide.comments')
+                sliders.forEach(el => {
+                    new Glide(el, {
+                        type: 'carousel',
+                        startAt: 0,
+                        autoplay: false,
+                        hoverpause: true,
+                        perView: 1,
+                        focusAt: 1,
+                        animationDuration: 800,
+                        animationTimingFunc: 'linear',
+                    }).mount({Controls})
                 })
             }, 2000)
         }

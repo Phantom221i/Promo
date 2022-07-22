@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: Expo.easeInOut
     });
 
-    TweenMax.from(".btn", 2, {
+    TweenMax.from(".hero .btn", 2, {
         delay: 2.2,
         opacity: 0,
         y: 20,
@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     gsap.registerPlugin(ScrollTrigger)
-
     if (exist('.our-product__content--box')) {
         let products_img = document.querySelectorAll('.our-product__content--box')
         products_img.forEach(el => {
@@ -75,26 +74,37 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-    let text_animate = document.querySelectorAll('.text-animation')
-    gsap.registerPlugin(SplitText);
+    if(exist('.text-animation')) {
+        let texts = document.querySelectorAll('.text-animation')
+        texts.forEach(el => {
+            el.style.transform = 'translateY(300px)'
+            el.style.opacity = '0'
 
-    text_animate.forEach(el => {
-        let tl = gsap.timeline(),
-            mySplitText = new SplitText(el, { type: "words,chars" }),
-            chars = mySplitText.chars;
+            gsap.to(el, {
+                scrollTrigger: el,
+                duration: 2.5,
+                ease: "back.out(1.7)",
+                y: 0,
+                opacity: 1,
+            });
+        })
+    }
 
-        gsap.set(el, { perspective: 400 });
+    if(exist(".about-us .list-countries li img")) {
+        const list_countries = document.querySelectorAll(".about-us .list-countries li img");
+        list_countries.forEach(el => {
+            const hover = gsap.to(el, {
+                scaleX:2, scaleY:2, scaleZ:3,
+                color: "blue",
+                duration: 1.5,
+                paused: true,
+                ease: "ease-in-out"
+            });
 
-        tl.from(chars, {
-            duration: 0.8,
-            opacity: 0,
-            scale: 0,
-            y: 80,
-            rotationX: 180,
-            transformOrigin: "0% 50% -50",
-            ease: "back",
-            stagger: 0.01
-        });
-    })
+            el.addEventListener("mouseenter", () => hover.play());
+            el.addEventListener("mouseleave", () => hover.reverse());
+        })
+    }
+
 })
 

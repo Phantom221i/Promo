@@ -669,6 +669,19 @@ $utilities: map-merge(
                                         100: 100%,
                                         200: 200px,
                                         400: 400px,
+                                        500: 500px,
+                                        896: 896px,
+                                        1024: 1024px,
+                                        1200: 1200px,
+                                        1400: 1400px,
+                                )
+                        ),
+                        "min-height": (
+                                property: min-height,
+                                class: mh,
+                                values: (
+                                        100vh: 100vh,
+                                        50vh: 50vh,
                                 )
                         ),
                         "z-index": (
