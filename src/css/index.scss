@@ -1,0 +1,245 @@
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hero {
+    &__left--bg, &__right--bg {
+      position: absolute;
+      height: 100%;
+      width: 50%;
+    }
+
+    &__left--bg {
+      background: #fff;
+      right: 50%;
+      left: 0;
+    }
+
+    &__right--bg {
+      background: tomato;
+      left: 50%;
+    }
+
+    &__content {
+      a:hover {
+        color: white !important;
+      }
+
+      &--center {
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          animation: fly 4s ease-in-out infinite;
+        }
+      }
+    }
+
+    .flags {
+      .glide__slide {
+        cursor: pointer;
+      }
+    }
+}
+.our-product {
+  &__content {
+    row-gap: 50px;
+
+    &--box {
+      img {
+        max-width: 400px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.about-us {
+  .glide {
+    .glide__arrows {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+
+      .glide__arrow {
+        cursor: pointer;
+
+         &--left {
+           left: 0;
+         }
+      }
+    }
+  }
+
+
+  &__content {
+    ul li {
+      img {
+
+      }
+    }
+  }
+}
+
+
+.our-team {
+  &::before {
+    content: "";
+    background: rgba(0,0,0, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.right-sidebar li:not(:first-child) {
+  padding: 6px 0;
+}
+
+@keyframes fly {
+  0%{
+    transform: translate(-50%, -46%);
+  }
+
+  50%{
+    transform: translate(-50%, -54%);
+  }
+
+  100%{
+    transform: translate(-50%, -46%);
+  }
+}
+
+.left-bottom {
+  position: absolute;
+  left: 60px;
+  bottom: 40px;
+  letter-spacing: 3px;
+  color: grey;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.left-sidebar button {
+  background: #101010;
+  color: #fff;
+  margin: 1em 0;
+  outline: none;
+  border: none;
+  font-weight: bolder;
+  letter-spacing: 4px;
+}
+
+.left-sidebar button:hover {
+  cursor: pointer;
+  color: grey;
+}
+
+.left-sidebar p {
+  font-weight: lighter;
+  line-height: 24px;
+  color: grey;
+}
+
+#price {
+  color: #000;
+}
+
+.media {
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+}
+
+.media ul {
+  list-style: none;
+}
+
+.media ul li {
+  display: inline-block;
+}
+
+.media ul li:not(:last-child) {
+  padding-right: 40px;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 990px){
+  .left-sidebar button {
+    padding: 12px 24px;
+  }
+  .left-sidebar {
+    bottom: 10%;
+    width: 35%;
+  }
+
+  .right-sidebar {
+    right: 80px;
+    top: 50%;
+  }
+
+  .watch {
+    right: 20px;
+    top: 30px;
+  }
+
+  .left-bottom {
+    left: 60%;
+    bottom: 10%;
+    line-height: 24px;
+  }
+
+  .media {
+    bottom: 25px;
+    right: 60px;
+  }
+
+
+  @keyframes fly {
+    0%{
+      transform: translate(-50%, -46%);
+      opacity: 0.2;
+    }
+
+    50%{
+      transform: translate(-50%, -54%);
+      opacity: 0.2;
+    }
+
+    100%{
+      transform: translate(-50%, -46%);
+      opacity: 0.2;
+    }
+  }
+}
+
+
+
+$black:#000;
+$white:#fff;
+
+.btn-primary {
+  @include button-variant($black, darken($black, 15%), darken($black, 20%), lighten($black,10%), lighten($black, 20%), darken($white, 15%));
+  color: white;
+  letter-spacing: 1.5px;
+}
+
+.full-width {
+  margin: 0 calc(50% - 50vw);
+}
+
+
+//_____________

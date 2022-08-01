@@ -1,0 +1,27 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.5.2",
+    "bootstrap": "^5.2.0",
+    "css-loader": "^6.7.1",
+    "gsap": "^3.10.4",
+    "lodash": "^4.17.21",
+    "mmenu-light": "^3.1.1",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1"
+  }
+}
