@@ -1,3 +1,4 @@
+<?php $domain = 'https://' . $_SERVER['SERVER_NAME'] . '/Promo'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,23 +10,7 @@
 </head>
 <body>
 <div class="container">
-    <header class="header position-absolute z-index-10 mt-24">
-        <a href="#menu"><img loading="lazy" width="30" alt="hamburger" src="./src/img/hamburger-menu.svg"></a>
-        <nav id="menu">
-            <ul class="list-style-none">
-                <li class="Selected"><a href="/">Home</a></li>
-                <li><span>Our products</span>
-                    <ul>
-                        <li><a href="/about/history/">History</a></li>
-                        <li><a href="/about/team/">The team</a></li>
-                        <li><a href="/about/address/">Our address</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <?php include 'header.php'; ?>
     <section class="section hero position-relative pb-36 full-width" style="height: 100vh">
         <div class="hero__left--bg"></div>
         <div class="hero__right--bg"></div>
@@ -83,15 +68,10 @@
             <div class="our-product__content row pt-96 pb-96 text-center">
                 <h2 class="text-center fs-48 mb-36 fw-bold text-white text-animation">OUR PRODUCTS</h2>
                 <div class="our-product__content--box col-md-4" delay="0.5">
-                    <img loading="lazy" data-speed="auto" src="./src/img/products/correct/artoflex.png" alt="">
-                    <div class="our-product__content--info d-none">
-                        <h2>Artoflex</h2>
-                        <p>крем для суставов Л-16С (а) [RUS]</p>
-                    </div>
+                    <a href="<?= $domain ?>/products/artoflex.php"><img loading="lazy" data-speed="auto" src="./src/img/products/correct/artoflex.png" alt=""></a>
                 </div>
-                    
                 <div class="our-product__content--box col-md-4" delay="1">
-                    <img loading="lazy" data-speed="auto" src="./src/img/products/correct/totalfit.png" alt="">
+                    <a href="<?= $domain ?>/products/totalfit.php"><img loading="lazy" data-speed="auto" src="./src/img/products/correct/totalfit.png" alt=""></a>
                 </div>
                 <div class="our-product__content--box col-md-4" delay="1.3">
                     <img loading="lazy" data-speed="auto" src="./src/img/products/correct/dealux.png" alt="">
@@ -117,6 +97,8 @@
                 <div class="our-product__content--box col-md-4" delay="1">
                     <img loading="lazy" data-speed="auto" src="./src/img/products/correct/ekzonidol.png" alt="">
                 </div>
+
+                <a class="mt-48 text-center mb-36 fw-bold text-white text-animation" href="#contacts">To receive a complete list of our products - contact us</a>
             </div>
         </div>
     </section>
@@ -207,12 +189,7 @@
         </div>
     </section>
 </div>
-
-<footer class="bg-gray-800 pt-48 pb-48">
-    <div class="container">
-        <p class="mb-0 fs-5 text-white text-center">© 2022. All Rights Reserved</p>
-    </div>
-</footer>
+<?php include 'footer.php'; ?>
 </body>
 <script src="./dist/js/scripts.js"></script>
 </html>
