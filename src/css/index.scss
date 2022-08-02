@@ -48,12 +48,34 @@ img {
 }
 .our-product {
   &__content {
+    position: relative;
     row-gap: 50px;
 
     &--box {
       img {
         max-width: 400px;
         width: 100%;
+      }
+    }
+
+    .product {
+      .info {
+        opacity: 0;
+        transition: 0.2s all;
+        background-color: rgba($white, 0.7);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 400px;
+        width: 100%;
+        min-height: 50%;
+      }
+
+      &:hover {
+        .info {
+          opacity: 1;
+        }
       }
     }
   }
@@ -98,6 +120,13 @@ img {
     width: 100%;
     height: 100%;
     z-index: -1;
+  }
+}
+
+#productModal {
+  .modal-dialog {
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 

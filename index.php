@@ -7,10 +7,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>OMNI PREVIEW</title>
+    <link href="./src/img/favicon_main.png" rel="shortcut icon">
 </head>
 <body>
 <div class="container">
-    <?php include 'header.php'; ?>
+    <?php include './layouts/header.php'; ?>
     <section class="section hero position-relative pb-36 full-width" style="height: 100vh">
         <div class="hero__left--bg"></div>
         <div class="hero__right--bg"></div>
@@ -63,41 +64,28 @@
             </div>
         </div>
     </section>
+
+    <?php
+    $string = file_get_contents("./src/js/products.json");
+    $json_a = json_decode($string,true);
+    $products = $json_a['products'];
+    ?>
     <section id="our-product" class="section our-product bg-primary full-width">
         <div class="container">
             <div class="our-product__content row pt-96 pb-96 text-center">
                 <h2 class="text-center fs-48 mb-36 fw-bold text-white text-animation">OUR PRODUCTS</h2>
-                <div class="our-product__content--box col-md-4" delay="0.5">
-                    <a href="<?= $domain ?>/products/artoflex.php"><img loading="lazy" data-speed="auto" src="./src/img/products/correct/artoflex.png" alt=""></a>
-                </div>
-                <div class="our-product__content--box col-md-4" delay="1">
-                    <a href="<?= $domain ?>/products/totalfit.php"><img loading="lazy" data-speed="auto" src="./src/img/products/correct/totalfit.png" alt=""></a>
-                </div>
-                <div class="our-product__content--box col-md-4" delay="1.3">
-                    <img loading="lazy" data-speed="auto" src="./src/img/products/correct/dealux.png" alt="">
-                </div>
-                <div class="our-product__content--box col-md-4" delay="1">
-                    <img loading="lazy" data-speed="auto" src="./src/img/products/correct/dioptik.png" alt="">
-                </div>
-                <div class="our-product__content--box col-md-4" delay="1.5">
-                    <img loading="lazy" data-speed="auto" src="./src/img/products/correct/visana.png" alt="">
-                </div>
-                <div class="our-product__content--box col-md-4" delay="2">
-                    <img loading="lazy" data-speed="auto" src="./src/img/products/correct/gialurin.png" alt="">
-                </div>
-                <div class="our-product__content--box col-md-4" delay="1">
-                    <img loading="lazy" data-speed="auto" src="./src/img/products/correct/micenil.png" alt="">
-                </div>
-                <div class="our-product__content--box col-md-4" delay="1.5">
-                    <img loading="lazy" data-speed="auto" src="./src/img/products/correct/aktifish.png" alt="">
-                </div>
-                <div class="our-product__content--box col-md-4" delay="2">
-                    <img loading="lazy" data-speed="auto" src="./src/img/products/correct/artonin.png" alt="">
-                </div>
-                <div class="our-product__content--box col-md-4" delay="1">
-                    <img loading="lazy" data-speed="auto" src="./src/img/products/correct/ekzonidol.png" alt="">
-                </div>
-
+                <?php foreach ($products as $key => $single_product): ?>
+                    <div class="our-product__content--box col-md-4 product-<?= $single_product['id']; ?>" delay="0.5">
+                        <div class="product d-inline-block">
+                            <img loading="lazy" data-speed="auto" src="./src/img/products/<?= $single_product['name']; ?>.png" alt="">
+                            <div class="info p-24">
+                                <h3><?= $single_product['name']; ?></h3>
+                                <p><?= $single_product['short_description']; ?></p>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-whatever="<?= $single_product['name']; ?>" product-id="<?= $single_product['id']; ?>">BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
                 <a class="mt-48 text-center mb-36 fw-bold text-white text-animation" href="#contacts">To receive a complete list of our products - contact us</a>
             </div>
         </div>
@@ -189,7 +177,7 @@
         </div>
     </section>
 </div>
-<?php include 'footer.php'; ?>
+<?php include './layouts/footer.php'; ?>
 </body>
-<script src="./dist/js/scripts.js"></script>
+<script src="./dist/js/scripts.js?v=36"></script>
 </html>

@@ -18,6 +18,8 @@
     "bootstrap": "^5.2.0",
     "css-loader": "^6.7.1",
     "gsap": "^3.10.4",
+    "intl-tel-input": "^17.0.18",
+    "jquery": "^3.6.0",
     "lodash": "^4.17.21",
     "mmenu-light": "^3.1.1",
     "sass": "^1.53.0",

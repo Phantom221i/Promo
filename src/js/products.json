@@ -1,0 +1,112 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "artoflex",
+      "short_description": "Artoflex - joint cream",
+      "price": 39.00,
+      "product_id": "95",
+      "special_price": "1",
+      "traffic_flowid": "44393"
+    },
+    {
+      "id": 2,
+      "name": "totalfit",
+      "short_description": "Totalfit - slimming cocktail",
+      "price": "39.00",
+      "product_id": "123",
+      "special_price": "1",
+      "traffic_flowid": "44393"
+    },
+    {
+      "id": 3,
+      "name": "dealux",
+      "short_description": "Dea‑Lux - foot gel",
+      "price": "39.00",
+      "product_id": "124",
+      "special_price": "1",
+      "traffic_flowid": "44393"
+    },
+    {
+      "id": 4,
+      "name": "dioptik",
+      "short_description": "Dioptik - a means for vision",
+      "price": "39.00",
+      "product_id": "",
+      "special_price": "1",
+      "traffic_flowid": "44393"
+    },
+    {
+      "id": 5,
+      "name": "visana",
+      "short_description": "Visana - a remedy for hearing",
+      "price": "39.00",
+      "product_id": "",
+      "special_price": "1",
+      "traffic_flowid": "44393"
+    },
+    {
+      "id": 6,
+      "name": "gialurin",
+      "short_description": "Gialurin - anti-wrinkle cream",
+      "price": "39.00",
+      "product_id": "",
+      "special_price": "1",
+      "traffic_flowid": "44393"
+    },
+    {
+      "id": 7,
+      "name": "micenil",
+      "short_description": "Micenil - cream from the fungus of nails and feet",
+      "price": "39.00",
+      "product_id": "",
+      "special_price": "1",
+      "traffic_flowid": "44393"
+    },
+    {
+      "id": 8,
+      "name": "actifish",
+      "short_description": "Actifish - bite activator",
+      "price": "39.00",
+      "product_id": "",
+      "special_price": "1",
+      "traffic_flowid": "44393"
+    },
+    {
+      "id": 9,
+      "name": "artonin",
+      "short_description": "Artonin - cream for joints",
+      "price": "39.00",
+      "product_id": "",
+      "special_price": "1",
+      "traffic_flowid": "44393"
+    },
+    {
+      "id": 10,
+      "name": "ekzinidol",
+      "short_description": "Ekzinidol - cream from the fungus of nails and feet",
+      "price": "39.00",
+      "product_id": "",
+      "special_price": "1",
+      "traffic_flowid": "44393"
+    },
+    {
+      "id": 11,
+      "name": "kardisen",
+      "short_description": "Kardisen - a remedy for hypertension",
+      "price": "39.00",
+      "product_id": "",
+      "special_price": "1",
+      "traffic_flowid": "44393"
+    },
+    {
+      "id": 12,
+      "name": "notoxin",
+      "short_description": "Notoxin - a remedy for parasites",
+      "price": "39.00",
+      "product_id": "",
+      "special_price": "1",
+      "traffic_flowid": "44393"
+    }
+  ]
+}

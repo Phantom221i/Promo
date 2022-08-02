@@ -1,8 +1,10 @@
 import "../css/main.scss"
 import "./animations"
 import "./sliders"
+import "bootstrap/js/dist/modal"
+import "./product"
 
-import MmenuLight from "mmenu-light";  // mobile menu
+import MmenuLight from "mmenu-light";
 document.addEventListener(
     "DOMContentLoaded", () => {
         const menu = new MmenuLight(
@@ -20,3 +22,5 @@ document.addEventListener(
             });
     }
 );
+
+
