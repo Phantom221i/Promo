@@ -59,8 +59,8 @@ if ( !empty( $phone ) ) {
             if (!empty($_POST)) {
                 /** @var OmniApi_User_03 $api */
                 $api = OmniApi_User_03::init()
-                    ->setToken('N79hcxTpjYimTKHE5YnTmO')
-                    ->setSecret('zKtIm0n1c9gFf9mTLHSWlA');
+                    ->setToken('jO9UFp24JA3skZt0rZGsQH')
+                    ->setSecret('v2RTLLW1xJro4rVEXC8DaU');
 
                 $discount = !empty($_POST['order']['discount']) ? $_POST['order']['discount'] : '';
                 $timezone = !empty($_POST['order']['timezone']) ? $_POST['order']['timezone'] : '';
@@ -98,21 +98,29 @@ if ( !empty( $phone ) ) {
                         ]
                     ]));
                     WriteOrders($name, $phone, $country_log, $product_name, $partner);
+                    $success_url = 'success.php?pxl=' . $pxl;
+                    header( 'Location: ' . $success_url );
+
                 } else {
-                    $error = 'l_pl55';
-                    $responseErrorKeys = array_keys($response['error']);
-                    $errorCode = $responseErrorKeys[0];
-                    if ($errorCode == '203103') $error = 'l_pl1';
-                    if ($errorCode == '203104') $error = 'l_pl53';
-                    if ($errorCode == '203109') $error = 'l_pl7';
-                    print(json_encode([
-                        'order_created' => [
-                            'error' => $error,
-                            '$response' => $response,
-                            'country' => $country
-                        ]
-                    ]));
+                    echo '<script>console.log("something went wrong")</script>';
+                    $success_url = 'success.php?pxl=' . $pxl;
+                    header( 'Location: ' . $success_url );
                 }
+//                else {
+//                    $error = 'l_pl55';
+//                    $responseErrorKeys = array_keys($response['error']);
+//                    $errorCode = $responseErrorKeys[0];
+//                    if ($errorCode == '203103') $error = 'l_pl1';
+//                    if ($errorCode == '203104') $error = 'l_pl53';
+//                    if ($errorCode == '203109') $error = 'l_pl7';
+//                    print(json_encode([
+//                        'order_created' => [
+//                            'error' => $error,
+//                            '$response' => $response,
+//                            'country' => $country
+//                        ]
+//                    ]));
+//                }
                 exit;
             }
 

@@ -9,7 +9,7 @@ document.addEventListener(
     "DOMContentLoaded", () => {
         const menu = new MmenuLight(
             document.querySelector( "#menu" ),
-
+            "(max-width: 767.98px)"
         );
 
         const navigator = menu.navigation();

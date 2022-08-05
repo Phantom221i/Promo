@@ -6,6 +6,18 @@ img {
   max-width: 100%;
 }
 
+header {
+  right: 30px;
+
+  #menu {
+      a {
+        &:hover {
+          color: #fff !important;
+        }
+      }
+  }
+}
+
 .hero {
     &__left--bg, &__right--bg {
       position: absolute;

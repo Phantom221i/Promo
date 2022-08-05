@@ -23,7 +23,7 @@
       "name": "dealux",
       "short_description": "Dea‑Lux - foot gel",
       "price": "39.00",
-      "product_id": "124",
+      "product_id": "129",
       "special_price": "1",
       "traffic_flowid": "44393"
     },
@@ -32,7 +32,7 @@
       "name": "dioptik",
       "short_description": "Dioptik - a means for vision",
       "price": "39.00",
-      "product_id": "",
+      "product_id": "140",
       "special_price": "1",
       "traffic_flowid": "44393"
     },
@@ -41,7 +41,7 @@
       "name": "visana",
       "short_description": "Visana - a remedy for hearing",
       "price": "39.00",
-      "product_id": "",
+      "product_id": "125",
       "special_price": "1",
       "traffic_flowid": "44393"
     },
@@ -50,7 +50,7 @@
       "name": "gialurin",
       "short_description": "Gialurin - anti-wrinkle cream",
       "price": "39.00",
-      "product_id": "",
+      "product_id": "107",
       "special_price": "1",
       "traffic_flowid": "44393"
     },
@@ -59,7 +59,7 @@
       "name": "micenil",
       "short_description": "Micenil - cream from the fungus of nails and feet",
       "price": "39.00",
-      "product_id": "",
+      "product_id": "97",
       "special_price": "1",
       "traffic_flowid": "44393"
     },
@@ -68,7 +68,7 @@
       "name": "actifish",
       "short_description": "Actifish - bite activator",
       "price": "39.00",
-      "product_id": "",
+      "product_id": "122",
       "special_price": "1",
       "traffic_flowid": "44393"
     },
@@ -77,7 +77,7 @@
       "name": "artonin",
       "short_description": "Artonin - cream for joints",
       "price": "39.00",
-      "product_id": "",
+      "product_id": "98",
       "special_price": "1",
       "traffic_flowid": "44393"
     },
@@ -86,16 +86,16 @@
       "name": "ekzinidol",
       "short_description": "Ekzinidol - cream from the fungus of nails and feet",
       "price": "39.00",
-      "product_id": "",
+      "product_id": "136",
       "special_price": "1",
       "traffic_flowid": "44393"
     },
     {
       "id": 11,
-      "name": "kardisen",
-      "short_description": "Kardisen - a remedy for hypertension",
+      "name": "dialecs",
+      "short_description": "Dialecs - remedy for diabetes",
       "price": "39.00",
-      "product_id": "",
+      "product_id": "139",
       "special_price": "1",
       "traffic_flowid": "44393"
     },
@@ -104,9 +104,10 @@
       "name": "notoxin",
       "short_description": "Notoxin - a remedy for parasites",
       "price": "39.00",
-      "product_id": "",
+      "product_id": "87",
       "special_price": "1",
       "traffic_flowid": "44393"
     }
   ]
 }
+
